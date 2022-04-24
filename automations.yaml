@@ -1,0 +1,48 @@
+- id: '1650481807618'
+  alias: ZHA - IKEA Tradfri on/off switch
+  description: ''
+  use_blueprint:
+    path: poolcactus/zha-ikea-tradfri-on-off-switch-incl-dimmer.yaml
+    input:
+      remote: bcc67e997e0cf010101017452e7e1129
+      light:
+        device_id: aa7d6739213513372bf254db49b40b84
+- id: '1650482642363'
+  alias: ZHA - IKEA Tradfri on/off switch
+  description: ''
+  use_blueprint:
+    path: poolcactus/zha-ikea-tradfri-on-off-switch-incl-dimmer.yaml
+    input:
+      remote: 8e39724558ae4ef995272a11b16638f1
+      light:
+        entity_id: light.spisebord
+- id: '1650483136252'
+  alias: Controller - IKEA E1743 TRÅDFRI On/Off Switch & Dimmer
+  description: ''
+  use_blueprint:
+    path: EPMatt/ikea_e1743.yaml
+    input:
+      controller_device: 8e39724558ae4ef995272a11b16638f1
+      controller_entity: sensor.main
+      action_button_up_short:
+      - type: turn_on
+        device_id: aa7d6739213513372bf254db49b40b84
+        entity_id: light.sofa
+        domain: light
+        brightness_pct: 50
+      action_button_up_long:
+      - device_id: aa7d6739213513372bf254db49b40b84
+        domain: light
+        entity_id: light.sofa
+        type: brightness_increase
+      action_button_down_short:
+      - type: turn_off
+        device_id: aa7d6739213513372bf254db49b40b84
+        entity_id: light.sofa
+        domain: light
+      action_button_down_long:
+      - device_id: aa7d6739213513372bf254db49b40b84
+        domain: light
+        entity_id: light.sofa
+        type: brightness_decrease
+      integration: ZHA

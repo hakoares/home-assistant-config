@@ -1,0 +1,63 @@
+- id: '1650476324122'
+  name: Slå på TV
+  entities:
+    media_player.samsung_the_frame_50:
+      source_list:
+      - TV
+      - HDMI
+      device_class: tv
+      icon: mdi:television
+      friendly_name: TV
+      supported_features: 20413
+      volume_level: 0.08
+      is_volume_muted: true
+      state: 'on'
+    media_player.stua:
+      friendly_name: Stua
+      supported_features: 450487
+      source_list:
+      - Altibox
+      - Apple Events
+      - App Store
+      - Arcade
+      - Bilder
+      - Datamaskiner
+      - discovery+
+      - Disney+
+      - Filmer
+      - Fireplace
+      - HBO Max
+      - Innstillinger
+      - Musikk
+      - Netflix
+      - NRK TV
+      - Podkaster
+      - Speedtest
+      - Spotify
+      - Søk
+      - TV
+      - TV 2 Play
+      - Unsplash
+      - VG
+      - Viafree
+      - Viaplay
+      - YouTube
+      state: idle
+    remote.stua:
+      friendly_name: Stua
+      supported_features: 0
+      state: 'on'
+  icon: mdi:television
+- id: '1650476621066'
+  name: Slå av TV
+  entities:
+    media_player.samsung_the_frame_50:
+      source_list:
+      - TV
+      - HDMI
+      device_class: tv
+      icon: mdi:television
+      friendly_name: TV
+      supported_features: 20413
+      state: 'off'
+  icon: mdi:television-off
